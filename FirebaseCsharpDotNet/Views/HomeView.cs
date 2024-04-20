@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace FirebaseCsharpDotNet
 {
@@ -23,10 +24,6 @@ namespace FirebaseCsharpDotNet
             db = FirestoreDb.Create(projectId);
         }
 
-        private void LoadData_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private async void AddData_Click(object sender, EventArgs e)
         {
@@ -43,7 +40,6 @@ namespace FirebaseCsharpDotNet
                 await taskDocument.SetAsync(data);
 
                 MessageBox.Show("Data Added Successfully");
-                AddText.Text = "";
             }
             catch (Exception ex)
             {
@@ -51,6 +47,30 @@ namespace FirebaseCsharpDotNet
             }
         }
 
+        private async void LoadData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DocumentReference taskDocument = db.Collection("Collection-Name").Document("Document-Name");
+                DocumentSnapshot snapshot = await taskDocument.GetSnapshotAsync();
+
+                if (snapshot.Exists)
+                {
+                    string name = snapshot.GetValue<string>("name");
+                    Console.WriteLine(name);
+                    DisplayText.Text = name;
+                    MessageBox.Show("Data Loaded Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Document does not exist");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
     }
 }
 

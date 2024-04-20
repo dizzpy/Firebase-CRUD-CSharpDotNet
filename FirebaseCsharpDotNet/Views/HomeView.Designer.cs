@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LoadData = new System.Windows.Forms.Button();
-            this.DisplatText = new System.Windows.Forms.Label();
+            this.DisplayText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AddText = new System.Windows.Forms.TextBox();
             this.AddData = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.LoadData);
-            this.panel1.Controls.Add(this.DisplatText);
+            this.panel1.Controls.Add(this.DisplayText);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(35, 117);
             this.panel1.Name = "panel1";
@@ -75,16 +75,16 @@
             this.LoadData.UseVisualStyleBackColor = true;
             this.LoadData.Click += new System.EventHandler(this.LoadData_Click);
             // 
-            // DisplatText
+            // DisplayText
             // 
-            this.DisplatText.AutoSize = true;
-            this.DisplatText.Font = new System.Drawing.Font("Poppins Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplatText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.DisplatText.Location = new System.Drawing.Point(22, 72);
-            this.DisplatText.Name = "DisplatText";
-            this.DisplatText.Size = new System.Drawing.Size(156, 48);
-            this.DisplatText.TabIndex = 1;
-            this.DisplatText.Text = "My Name";
+            this.DisplayText.AutoSize = true;
+            this.DisplayText.Font = new System.Drawing.Font("Poppins Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayText.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.DisplayText.Location = new System.Drawing.Point(22, 72);
+            this.DisplayText.Name = "DisplayText";
+            this.DisplayText.Size = new System.Drawing.Size(156, 48);
+            this.DisplayText.TabIndex = 1;
+            this.DisplayText.Text = "My Name";
             // 
             // panel2
             // 
@@ -175,7 +175,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label DisplatText;
+        private System.Windows.Forms.Label DisplayText;
         private System.Windows.Forms.Button LoadData;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button AddData;
