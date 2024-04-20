@@ -73,6 +73,7 @@
             this.LoadData.TabIndex = 2;
             this.LoadData.Text = "Load Data";
             this.LoadData.UseVisualStyleBackColor = true;
+            this.LoadData.Click += new System.EventHandler(this.LoadData_Click);
             // 
             // DisplatText
             // 
@@ -112,6 +113,7 @@
             this.AddData.TabIndex = 2;
             this.AddData.Text = "Add Data";
             this.AddData.UseVisualStyleBackColor = true;
+            this.AddData.Click += new System.EventHandler(this.AddData_Click);
             // 
             // label4
             // 
