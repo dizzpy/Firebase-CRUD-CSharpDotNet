@@ -20,8 +20,8 @@ namespace FirebaseCsharpDotNet
 
         private void InitializeFirestore()
         {
-            string projectId = "fir-csdotnet";
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\User\\Desktop\\Studee\\FirebaseCsharpDotNet\\FirebaseCsharpDotNet\\Credentials\\firebaseCredentials.json");
+            string projectId = "project-id";
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "path-to-json-file");
             db = FirestoreDb.Create(projectId);
         }
 
