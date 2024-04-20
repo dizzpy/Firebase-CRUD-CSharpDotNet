@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace FirebaseCsharpDotNet
@@ -63,12 +64,31 @@ namespace FirebaseCsharpDotNet
                 }
                 else
                 {
-                    MessageBox.Show("Document does not exist");
+                    MessageBox.Show("No Document Found");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+
+        private async void DeleteData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DocumentReference taskDocument = db.Collection("Collection-Name").Document("Document-Name");
+                await taskDocument.DeleteAsync();
+
+                DisplayText.Text = "No Data";
+                AddText.Text = "";
+
+
+                MessageBox.Show("Data Deleted Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting data: " + ex.Message);
             }
         }
     }

@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.DeleteData = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,9 +83,9 @@
             this.DisplayText.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.DisplayText.Location = new System.Drawing.Point(22, 72);
             this.DisplayText.Name = "DisplayText";
-            this.DisplayText.Size = new System.Drawing.Size(156, 48);
+            this.DisplayText.Size = new System.Drawing.Size(135, 48);
             this.DisplayText.TabIndex = 1;
-            this.DisplayText.Text = "My Name";
+            this.DisplayText.Text = "No Data";
             // 
             // panel2
             // 
@@ -145,12 +146,24 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Firebase Add/Delete";
             // 
+            // DeleteData
+            // 
+            this.DeleteData.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.DeleteData.Location = new System.Drawing.Point(35, 554);
+            this.DeleteData.Name = "DeleteData";
+            this.DeleteData.Size = new System.Drawing.Size(406, 47);
+            this.DeleteData.TabIndex = 4;
+            this.DeleteData.Text = "Delete Data in Firestore";
+            this.DeleteData.UseVisualStyleBackColor = true;
+            this.DeleteData.Click += new System.EventHandler(this.DeleteData_Click);
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(475, 568);
+            this.ClientSize = new System.Drawing.Size(475, 623);
+            this.Controls.Add(this.DeleteData);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -183,6 +196,7 @@
         private System.Windows.Forms.TextBox AddText;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button DeleteData;
     }
 }
 
